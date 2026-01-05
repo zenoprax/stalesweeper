@@ -16,6 +16,11 @@ export interface DiscussionNode {
   updatedAt: string
   isAnswered: boolean | null
   category: DiscussionCategory
+  labels?: {
+    nodes: Array<{
+      name: string
+    }>
+  }
 }
 
 export interface DiscussionCategory {
@@ -31,10 +36,9 @@ export interface WrappedQueryResponse<T> {
 export type DiscussionCloseReason = 'DUPLICATE' | 'OUTDATED' | 'RESOLVED'
 
 export interface GitHubRateLimit {
-  data: {
-    rateLimit: {
-      limit: number
-      remaining: number
-    }
+  rateLimit: {
+    limit: number
+    remaining: number
+    resetAt?: string
   }
 }

@@ -18,6 +18,11 @@ query {
           name
           isAnswerable
         }
+        labels(first: 100) {
+          nodes {
+            name
+          }
+        }
       }
       pageInfo {
         hasNextPage
@@ -46,7 +51,7 @@ export function buildCloseDiscussionQuery(
 ): string {
   return `
 mutation {
-  closeDiscussion(input:{discussionId: "${discussionId}", reason: ${reason as string}}) {
+  closeDiscussion(input:{discussionId: "${discussionId}", reason: ${reason}}) {
     discussion{id}
   }
 }`
