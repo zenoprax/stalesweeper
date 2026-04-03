@@ -73,8 +73,16 @@ jobs:
 
 ## Credits
 
-The original GH Action was created by [Steffen Karlsson](https://github.com/steffen-karlsson/stalesweeper) but it has been unmaintained since early 2024.
+The original GH Action was created by
+[Steffen Karlsson](https://github.com/steffen-karlsson/stalesweeper) but it has
+been unmaintained since early 2024.
 
-This was forked by [Nicholas VanCise (thenick775)](https://github.com/thenick775/stalesweeper) who added a dry-run mode and proper logging for troubleshooting among other improvements.
+This was forked by
+[Nicholas VanCise (thenick775)](https://github.com/thenick775/stalesweeper) who
+added a dry-run mode and proper logging for troubleshooting among other
+improvements.
 
-I decided to use it to help manage the thousands of open discussions for the [Super Productivity](https://github.com/super-productivity/super-productivity) task manager and wanted to have full control over its availability and functionality.
+I decided to use it to help manage the thousands of open discussions for the
+[Super Productivity](https://github.com/super-productivity/super-productivity)
+task manager and wanted to have full control over its availability and
+functionality.

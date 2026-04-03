@@ -45,3 +45,9 @@ jobs:
       - name: Test
         id: npm-ci-test
         run: npm run ci-test
+
+      - name: Security Check - Runtime Dependencies
+        id: audit-production
+        run: |
+          echo "🔍 Checking production dependencies for high/critical vulnerabilities..."
+          npm audit --omit=dev --audit-level=high
