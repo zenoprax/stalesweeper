@@ -1,8 +1,8 @@
-[![Stale Discussions](./logo/banner.png)](https://github.com/thenick775/stalesweeper/)
+[![Stale Discussions](./logo/banner.png)](https://github.com/zenoprax/stalesweeper/)
 
-[![Lint Codebase](https://github.com/thenick775/stalesweeper/actions/workflows/linter.yml/badge.svg)](https://github.com/thenick775/stalesweeper/actions/workflows/linter.yml)
-[![Continuous Integration](https://github.com/thenick775/stalesweeper/actions/workflows/ci.yml/badge.svg)](https://github.com/thenick775/stalesweeper/actions/workflows/ci.yml)
-[![Check Transpiled JavaScript](https://github.com/thenick775/stalesweeper/actions/workflows/check-dist.yml/badge.svg)](https://github.com/thenick775/stalesweeper/actions/workflows/check-dist.yml)
+[![Lint Codebase](https://github.com/zenoprax/stalesweeper/actions/workflows/linter.yml/badge.svg)](https://github.com/zenoprax/stalesweeper/actions/workflows/linter.yml)
+[![Continuous Integration](https://github.com/zenoprax/stalesweeper/actions/workflows/ci.yml/badge.svg)](https://github.com/zenoprax/stalesweeper/actions/workflows/ci.yml)
+[![Check Transpiled JavaScript](https://github.com/zenoprax/stalesweeper/actions/workflows/check-dist.yml/badge.svg)](https://github.com/zenoprax/stalesweeper/actions/workflows/check-dist.yml)
 
 ## Purpose
 
@@ -65,7 +65,7 @@ jobs:
 
     steps:
       - name: Run action
-        uses: thenick775/stalesweeper@main
+        uses: zenoprax/stalesweeper@main
         with:
           message: 'This discussion has been closed due to inactivity.'
           days-before-close: '14'
@@ -73,5 +73,8 @@ jobs:
 
 ## Credits
 
-Big thanks to [steffen-karlsson](https://github.com/steffen-karlsson) for the
-[original implementation](https://github.com/steffen-karlsson/stalesweeper)
+The original GH Action was created by [Steffen Karlsson](https://github.com/steffen-karlsson/stalesweeper) but it has been unmaintained since early 2024.
+
+This was forked by [Nicholas VanCise (thenick775)](https://github.com/thenick775/stalesweeper) who added a dry-run mode and proper logging for troubleshooting among other improvements.
+
+I decided to use it to help manage the thousands of open discussions for the [Super Productivity](https://github.com/super-productivity/super-productivity) task manager and wanted to have full control over its availability and functionality.

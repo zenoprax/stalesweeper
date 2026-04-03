@@ -2,15 +2,15 @@
   "name": "stalesweeper",
   "description": "StaleSweeper - Automatically closes stale discussions to declutter your GitHub Discussion space.",
   "version": "1.0.0",
-  "author": "Steffen Wirenfeldt Karlsson",
+  "author": "Corey Newton",
   "private": true,
-  "homepage": "https://github.com/thenick775/stalesweeper",
+  "homepage": "https://github.com/zenoprax/stalesweeper",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thenick775/stalesweeper.git"
+    "url": "git+https://github.com/zenoprax/stalesweeper.git"
   },
   "bugs": {
-    "url": "https://github.com/thenick775/stalesweeper/issues"
+    "url": "https://github.com/zenoprax/stalesweeper/issues"
   },
   "keywords": [
     "actions",

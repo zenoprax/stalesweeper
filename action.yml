@@ -2,7 +2,7 @@ name: 'StaleSweeper'
 description:
   'Automatically closes stale discussions to declutter your GitHub Discussion
   space.'
-author: 'Nicholas VanCise'
+author: 'Corey Newton'
 branding:
   icon: 'message-circle'
   color: 'green'
