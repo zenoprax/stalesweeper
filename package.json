@@ -1,7 +1,7 @@
 {
   "name": "stalesweeper",
   "description": "StaleSweeper - Automatically closes stale discussions to declutter your GitHub Discussion space.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "Corey Newton",
   "private": true,
   "homepage": "https://github.com/zenoprax/stalesweeper",
