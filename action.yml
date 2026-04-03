@@ -57,5 +57,5 @@ outputs:
     description: 'Provides a list of all discussions that were closed.'
 
 runs:
-  using: node20
+  using: node24
   main: dist/index.js
