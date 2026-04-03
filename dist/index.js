@@ -58669,9 +58669,11 @@ exports.HandleStaleDiscussions = void 0;
 const graphql_processor_1 = __nccwpck_require__(1993);
 const discussion_queries_1 = __nccwpck_require__(3467);
 const ansi_comments_1 = __nccwpck_require__(7305);
+const delay_1 = __nccwpck_require__(1382);
 class HandleStaleDiscussions extends graphql_processor_1.GraphqlProcessor {
     async process(input) {
         for (const discussion of input.discussions) {
+            await (0, delay_1.delay)(this.props.rateLimitDelayMs);
             const act = async () => {
                 (0, ansi_comments_1.writeWithDiscussionNumber)(discussion.number, `Adding comment and closing discussion #${discussion.number}`);
                 if (this.props.debug) {
@@ -58736,6 +58738,7 @@ class DiscussionInputProcessor {
         const closeUnanswered = (0, core_1.getInput)('close-unanswered') === 'true';
         const closeReason = (0, core_1.getInput)('close-reason');
         const debug = (0, core_1.getInput)('dry-run') === 'true';
+        const rateLimitDelayMs = parseInt((0, core_1.getInput)('rate-limit-delay'));
         const raw = {
             repoToken,
             message,
@@ -58774,7 +58777,8 @@ class DiscussionInputProcessor {
                 exemptLabels,
                 closeUnanswered,
                 closeReason: raw.closeReason,
-                debug
+                debug,
+                rateLimitDelayMs
             },
             success: true,
             debug
@@ -59028,6 +59032,19 @@ const colorDate = (dateString) => cyan(dateString);
 exports.colorDate = colorDate;
 const colorNumber = (number) => cyan(number);
 exports.colorNumber = colorNumber;
+
+
+/***/ }),
+
+/***/ 1382:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.delay = void 0;
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+exports.delay = delay;
 
 
 /***/ }),
